@@ -65,6 +65,7 @@ public class Sample2 {
         System.out.println(driver.findElements(By.className("text")).size()); // 5
         List<WebElement> allElementsWithClass = driver.findElements(By.className("text"));
 //
+
         for (WebElement elementWithClass : allElementsWithClass) {
             System.out.println(elementWithClass.getText());
             //            sample text 1
