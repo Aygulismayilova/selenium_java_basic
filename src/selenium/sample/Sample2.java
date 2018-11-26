@@ -23,7 +23,7 @@ public class Sample2 {
         driver = new ChromeDriver();
 
         //open page:
-        driver.get("https://kristinek.github.io/site/examples/loc");
+        driver.get("https://kristinek.github.io/site/examples/locators");
     }
 
     // method which is being run after each test
@@ -76,5 +76,7 @@ public class Sample2 {
         System.out.println("-----------------------");
         System.out.println(driver.findElements(By.className("text")).get(0).getText());
         System.out.println(driver.findElements(By.className("text")).get(2).getText()); // "unbelievable sample text"
+
+        Thread.sleep(1000000);
     }
 }
