@@ -42,10 +42,12 @@ public class Task1 {
         WebElement text = driver.findElement(By.id("ch1_error"));
         String newText = "hello";
 
+        assertFalse(text.isDisplayed());
+        assertTrue(button.isEnabled());
 
-      button.click(); // test without any input
+        button.click(); // test without any input
 
-      assertTrue("You haven't entered anything", text.isDisplayed());
+        assertTrue("You haven't entered anything", text.isDisplayed());
 
         field.sendKeys(newText);
 
@@ -65,6 +67,9 @@ public class Task1 {
         WebElement button = driver.findElement(By.className("w3-orange"));
         WebElement text = driver.findElement(By.id("ch1_error"));
         String newText = "25";
+
+        assertFalse(text.isDisplayed());
+        assertTrue(button.isEnabled());
 
         field.sendKeys(newText);
 
@@ -86,6 +91,9 @@ public class Task1 {
         WebElement text = driver.findElement(By.id("ch1_error"));
         String newText = "225";
 
+        assertFalse(text.isDisplayed());
+        assertTrue(button.isEnabled());
+
         field.sendKeys(newText);
 
         button.click();
@@ -102,6 +110,9 @@ public class Task1 {
         WebElement button = driver.findElement(By.className("w3-orange"));
         WebElement text = driver.findElement(By.id("ch1_error"));
         String newText = "81";
+
+        assertFalse(text.isDisplayed());
+        assertTrue(button.isEnabled());
 
         field.sendKeys(newText);
 
@@ -126,6 +137,9 @@ public class Task1 {
         WebElement button = driver.findElement(By.className("w3-orange"));
         WebElement text = driver.findElement(By.id("ch1_error"));
         String newText = "79";
+
+        assertFalse(text.isDisplayed());
+        assertTrue(button.isEnabled());
 
         field.sendKeys(newText);
 
