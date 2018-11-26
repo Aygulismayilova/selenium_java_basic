@@ -36,7 +36,7 @@ public class Sample2Task {
     public void findElementByID() throws Exception {
 //         TODO:
 //         get text "Heading 2 text" using id
-        System.out.println(driver.findElement(By.id("Heading 2 text")).getText());
+        System.out.println(driver.findElement(By.id("heading_2")).getText());
 //        <h2 id="heading_2">Heading 2 text</h2>
     }
 
@@ -81,4 +81,6 @@ public class Sample2Task {
             System.out.println(driver.findElements(By.className("test")).get(0).getText());
             System.out.println(driver.findElements(By.className("test")).get(2).getText()); // "unbelievable sample text"
         }
+
+
     }
