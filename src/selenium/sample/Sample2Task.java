@@ -63,7 +63,6 @@ public class Sample2Task {
         for(int i = 0; i < driver.findElements(By.className("test")).size(); i++) {
             System.out.println(driver.findElements(By.className("test")).get(i).getText());
         }
-
         // get third text of class "test" (should be "Test Text 4")
         System.out.println(driver.findElements(By.className("test")).get(2).getText());
     }
