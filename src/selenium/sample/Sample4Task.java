@@ -3,12 +3,17 @@ package selenium.sample;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class Sample4Task {
     WebDriver driver;
-    String base_url = "https://kristinek.github.io/site/examples/act";
+    String base_url = "https://kristinek.github.io/site/examples/actions";
 
     // method which is being run before each test
     @Before
@@ -30,11 +35,56 @@ public class Sample4Task {
 
     @Test
     public void enterNumberWithInt() throws Exception {
+
+        WebElement numberArea = driver.findElement(By.id("number"));
+
+        //        check that button is not clickable "Clear Result"
+        WebElement Clearresult = driver.findElement(By.id("clear_result_button_number"));
+        assertFalse(Clearresult.isEnabled());
+
+        Thread.sleep(100);
+
+        //        enter a number under "Number"
+        String originalNumber = " 5 ";
+        driver.findElement(By.id("number")).clear();
+
+        numberArea.sendKeys(" 1 ");
+        WebElement resultkey = driver.findElement(By.id("result_button_number"));
+
+        Thread.sleep(100);
+        //        click on "Result" button
+        resultkey.click();
+
+        WebElement text = driver.findElement(By.id("result_number"));
+        assertFalse(text.isDisplayed());
+
+        //assertEquals(text.getText());
+
+        //assertEquals(text.getText(), "You entered number: \" " + newNumber + "\");
+
+        Thread.sleep(100);
+
+        driver.findElement(By.id("homepage_link")).click();
+        assertFalse(driver.getCurrentUrl().equals(base_url));
+        assertEquals("https://kristinek.github.io/site/", driver.getCurrentUrl());
+
+
+        //        check that text is not displayed
+
+
+
+
+
+
+        Thread.sleep(100);
+
+        numberArea.clear();
+
 //         TODO:
-//        enter a number under "Number"
-//        check that button is not clickable "Clear Result"
+
+
 //        check that text is not displayed
-//        click on "Result" button
+
 //        check that text is displayed
 //        check that the correct Text appears ("You entered number: "NUMBER YOU ENTERED"")
 //        check that the button "Clear Result" is clickable now
