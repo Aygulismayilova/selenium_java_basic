@@ -23,7 +23,7 @@ public class Sample2 {
         driver = new ChromeDriver();
 
         //open page:
-        driver.get("https://kristinek.github.io/site/examples/loc");
+        driver.get("https://kristinek.github.io/site/examples/locators");
     }
 
     // method which is being run after each test
@@ -51,7 +51,7 @@ public class Sample2 {
         System.out.println(driver.findElement(By.name("randomButton1")).getAttribute("name")); // "randomButton"
         System.out.println(driver.findElement(By.name("randomButton1")).getAttribute("id")); // empty
         // Unable to locate element: {"method":"name","selector":"randomButton123"}:
-//        System.out.println(driver.findElement(By.name("randomButton123")).getAttribute("value"));
+        System.out.println(driver.findElement(By.name("randomButton123")).getAttribute("value"));
     }
 
     @Test
