@@ -46,8 +46,8 @@ public class Sample5 {
     }
 
     @Test
-    public void alertOnclickingButton() throws Exception {
-        driver.findElement(By.className("w3-red")).click();
+    public void alertOnClickingButton() throws Exception {
+        driver.findElement(By.className("w3-red")).click();// kak naiti element + click on it
         Alert alert = driver.switchTo().alert();
         assertEquals("I am an alert box!", alert.getText());
 

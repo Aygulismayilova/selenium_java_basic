@@ -65,7 +65,7 @@ public class Sample2Task {
         //         get text of class "test"
         List<WebElement> allElementsWithClass = driver.findElements(By.className("test"));
       //for (int i = 0, i < allElementsWithClass.size());
-        
+
          for (WebElement elementWithClass : allElementsWithClass) {
             System.out.println(elementWithClass.getText());
 
