@@ -3,8 +3,14 @@ package selenium.tasks;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.server.handler.WebElementHandler;
+
+import javax.security.auth.callback.TextInputCallback;
+import javax.xml.soap.Text;
 
 public class Task1 {
     WebDriver driver;
@@ -26,13 +32,24 @@ public class Task1 {
     @Test
     public void errorOnText() {
 //        TODO
+
+
 //        enter a text instead of a number, check that correct error is seen
-    }
+        driver.findElement(By.className(" w3-row")).click();
+        WebElement Enternumber = driver.findElement(By.id("numb"));
+        String expected = "hello";
+        Enternumber .clear();
+        Enternumber .sendKeys(expected);
+        driver.findElement(By.className(" w3-orange")).click();
+        assert equals(("Please enter a number",driver.findElement(By.id("ch1_error")).getText());
+
+            }
 
     @Test
     public void errorOnNumberTooSmall() {
 //        TODO
-//        enter number which is too small (below 50), check that correct error is seen
+//        enter number whichdr is too small (below 50), check that correct error is seen
+        driver.findElements(By.className(""));
     }
 
     @Test
