@@ -23,7 +23,7 @@ public class Sample1 {
         System.out.println(driver.getTitle());
 
         //get URL of current page
-        System.out.println(driver.getCurrentUrl());
+        System.out.println(driver.getTitle());
 
         //Sleep for 10 seconds
         Thread.sleep(10000);
