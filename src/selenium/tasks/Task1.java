@@ -62,6 +62,15 @@ public class Task1 {
         assertEquals("Eror message","", driver.findElement(By.id("ch1_error")).getText());
 
         numberInput.clear();
+//        BUG:
+        WebElement numberInputThree = driver.findElement(By.id("numb"));
+        numberInputThree.sendKeys("49");
+        driver.findElement(By.className("w3-orange")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Square root of 49 is 7.00",driver.switchTo().alert().getText());
+        alert.accept();
+
+        numberInput.clear();
 
         WebElement numberInputSecond = driver.findElement(By.id("numb"));
         numberInputSecond.sendKeys("555");

@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class Sample4 {
     WebDriver driver;
-    String base_url = "https://kristinek.github.io/site/examples/act";
+    String base_url = "https://kristinek.github.io/site/examples/actions";
 
     // method which is being run before each test
     @Before
@@ -97,7 +97,7 @@ public class Sample4 {
     @Test
     public void enterTextInTextBox() throws Exception {
         WebElement textInput = driver.findElement(By.id("text"));
-        String originalText = "This is a text box";
+        String originalText = "This is  a text box";
         String sendKeyOne = " bla-bla";
 
         assertEquals(textInput.getText(), ""); // checking that getText is empty

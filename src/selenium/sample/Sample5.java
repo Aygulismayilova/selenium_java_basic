@@ -35,7 +35,7 @@ public class Sample5 {
 
     @Test
     public void alertOnOpeningPage() throws Exception {
-        driver.get("https://kristinek.github.io/site/examples/al_p");
+        driver.get("https://kristinek.github.io/site/examples/alerted_page");
 //        org.openqa.selenium.UnhandledAlertException: unexpected alert open:
 //        driver.findElement(By.id("heading")).getText();
         Alert alert = driver.switchTo().alert();
