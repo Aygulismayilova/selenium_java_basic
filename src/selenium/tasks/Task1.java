@@ -76,8 +76,8 @@ public class Task1 {
         Alert alert = driver.switchTo().alert();
         assertEquals("Square root of 64 is 8.00", alert.getText());
         alert.accept();
-WebElement errorText = driver.findElement(By.id("ch1_error"));
-assertFalse(errorText.isDisplayed());
+        WebElement errorText = driver.findElement(By.id("ch1_error"));
+        assertFalse(errorText.isDisplayed());
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 2 is square root of 4),
 //        then and press submit and check that correct no error is seen and check that square root is calculated correctly
     }
@@ -94,6 +94,7 @@ assertFalse(errorText.isDisplayed());
         alert.accept();
         WebElement errorText = driver.findElement(By.id("ch1_error"));
         assertFalse(errorText.isDisplayed());
+
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 1.732.. is square root of 3) and press submit,
 //        then check that correct no error is seen and check that square root is calculated correctly
     }
