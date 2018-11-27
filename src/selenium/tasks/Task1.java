@@ -45,7 +45,10 @@ public class Task1 {
         assertFalse(text.isDisplayed());
         assertTrue(button.isEnabled());
 
-        button.click(); // test without any input
+        assertEquals(field.getText(),"");
+        assertEquals(field.getAttribute("value"), "");
+
+        button.click();
 
         assertTrue("You haven't entered anything", text.isDisplayed());
 
@@ -71,6 +74,9 @@ public class Task1 {
         assertFalse(text.isDisplayed());
         assertTrue(button.isEnabled());
 
+        assertEquals(field.getText(),"");
+        assertEquals(field.getAttribute("value"), "");
+
         field.sendKeys(newText);
 
         button.click();
@@ -94,6 +100,9 @@ public class Task1 {
         assertFalse(text.isDisplayed());
         assertTrue(button.isEnabled());
 
+        assertEquals(field.getText(),"");
+        assertEquals(field.getAttribute("value"), "");
+
         field.sendKeys(newText);
 
         button.click();
@@ -113,6 +122,9 @@ public class Task1 {
 
         assertFalse(text.isDisplayed());
         assertTrue(button.isEnabled());
+
+        assertEquals(field.getText(),"");
+        assertEquals(field.getAttribute("value"), "");
 
         field.sendKeys(newText);
 
@@ -140,6 +152,9 @@ public class Task1 {
 
         assertFalse(text.isDisplayed());
         assertTrue(button.isEnabled());
+
+        assertEquals(field.getText(),"");
+        assertEquals(field.getAttribute("value"), "");
 
         field.sendKeys(newText);
 
