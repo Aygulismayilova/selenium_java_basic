@@ -80,6 +80,9 @@ public class Task1 {
         Enternumber .clear();
         Enternumber .sendKeys(expected);
         driver.findElement(By.className(" w3-orange")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Square root of 64 is 8.00", alert.getText());
+
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 2 is square root of 4),
 //        then and press submit and check that correct no error is seen and check that square root is calculated correctly
     }
@@ -87,6 +90,15 @@ public class Task1 {
     @Test
     public void correctSquareRootWithRemainder() {
 //        TODO
+        driver.findElement(By.className(" w3-row")).click();
+        WebElement Enternumber = driver.findElement(By.id("numb"));
+        String expected = "80";
+        Enternumber .clear();
+        Enternumber .sendKeys(expected);
+        driver.findElement(By.className(" w3-orange")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Square root of 80 is 8.94", alert.getText());
+
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 1.732.. is square root of 3) and press submit,
 //        then check that correct no error is seen and check that square root is calculated correctly
     }
