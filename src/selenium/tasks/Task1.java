@@ -40,7 +40,7 @@ public class Task1 {
         WebElement field = driver.findElement(By.id("numb"));
         WebElement button = driver.findElement(By.className("w3-orange"));
         WebElement text = driver.findElement(By.id("ch1_error"));
-        String newText = "hello";
+        String newText = "hello everyone";
 
         assertFalse(text.isDisplayed());
         assertTrue(button.isEnabled());
