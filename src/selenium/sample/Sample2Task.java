@@ -23,7 +23,7 @@ public class Sample2Task {
         driver = new ChromeDriver();
 
         //open page:
-        driver.get("https://kristinek.github.io/site/examples/loc");
+        driver.get("https://kristinek.github.io/site/examples/locators");
     }
 
     // method which is being run after each test
@@ -37,7 +37,7 @@ public class Sample2Task {
 //         TODO:
 //         get text "Heading 2 text" using id
 //        <h2 id="heading_2">Heading 2 text</h2>
-        System.out.println(driver.findElement(By.id ("heading_2")).getText());
+        System.out.println(driver.findElement(By.id("heading_2")).getText());
     }
 
     @Test
@@ -46,8 +46,9 @@ public class Sample2Task {
 //         get attribute "id" and "value" of button "This is also a button" using name
 
 //        <input type="button" id="buttonId" value="This is also a button" name="randomButton2">
-        System.out.println(driver.findElement(By.name("randomButton2")).getAttribute("value") + " \t  " +
-                driver.findElement(By.name("randombutton2")).getAttribute("id")) ;
+
+        System.out.println(driver.findElement(By.name("randomButton2")).getAttribute("id") + " -- "
+                +  driver.findElement(By.name("randomButton2")).getAttribute("value"));
     }
 
     @Test
@@ -64,16 +65,15 @@ public class Sample2Task {
         //System.out.println(driver.get (By.className("test")).getText());getClass();
 //         get text of class "test"
 
-        System.out.println(driver.findElements(By.className("test")).size());
+        //System.out.println(driver.findElements(By.className("test")).size());
 
-        List<WebElement> allElementWithClass = driver.findElements(By.className("test")).
+        List<WebElement> allElementWithClass = driver.findElements(By.className("test"));
+        System.out.println(allElementWithClass.size());
 
-             for(WebElement elementWithClass : allElementsWithClass)   {
-                 System.out.println(elementWithClass.getText());}
-        System.out.println();
-//         get third text of class "test" (should be "Test Text 4")
+        for (WebElement elem : allElementWithClass) {
+            System.out.println(elem.getText());
+        }
+        System.out.println(allElementWithClass.get(2).getText());
 
-        System.out.println(driver.findElements(By.className("test")).get(2).getText());
-        //some changes etc.
     }
 }

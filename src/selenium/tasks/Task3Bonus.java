@@ -48,11 +48,11 @@ public class Task3Bonus {
         /* TODO:
          * implement editing a person using page object
          *
-         * in order: store the list of people and jobs currently on page
+                 * in order: store the list of people and jobs currently on page
          * edit one of existing persons via the edit link
          * check the list again and that 2 people stayed the same and the one used was changed
          */
-    }
+}
 
     @Test
     public void editPersonCancel() {
