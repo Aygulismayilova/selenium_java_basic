@@ -128,7 +128,7 @@ public class Task1 {
         WebElement submit = driver.findElement(By.className("w3-orange"));
         String squareRootOk = "85";
 //      enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 1.732.. is square root of 3) and press submit,
-//      then check that correct no error is seen and check that square root is calculated correctly
+//      then check that correct no error is seen and check that square root is calculated correctly /////
 
         enterNumb.sendKeys(String.valueOf(squareRootOk));
         submit.click();
